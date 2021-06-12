@@ -6,9 +6,6 @@ services:
 before_install:
  - docker build -t shilajitgr/docker-react .
 
-script:
- - docker run -e CI=true shilajitgr/docker-react npm run test -- --coverage
-
 deploy:
  provider: elasticbeanstalk
  region: "us-east-1" 
