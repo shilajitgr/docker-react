@@ -11,4 +11,5 @@ RUN npm run build
 FROM nginx
 #  nginx is the 2nd base img
 # the cmd below is copying data above phase
+EXPOSE 80
 COPY --from=0 /app/build /usr/share/nginx/html
