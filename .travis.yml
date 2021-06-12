@@ -4,7 +4,7 @@ services:
  - docker
 
 before_install:
- - docker build -t shilajitgr/docker-react -f Dockerfile.dev .
+ - docker build -t shilajitgr/docker-react .
 
 script:
  - docker run -e CI=true shilajitgr/docker-react npm run test -- --coverage
